@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Sway - User Profile"
+    >
+
+    <title>Sway — Profile</title>
+
+    <link
+        rel="stylesheet"
+        href="./css/style.css"
+    >
+
+    <script
+        src="https://unpkg.com/lucide@latest"
+    ></script>
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- ============================================
+         TOP NAVIGATION
+         ============================================ -->
+
+    <header class="topbar">
+
+        <!-- BRAND -->
+
+        <a
+            href="./index.html"
+            class="brand"
+        >
+
+            <span class="brand-mark">
+                S
+            </span>
+
+            <span>
+                Sway
+            </span>
+
+        </a>
+
+
+        <!-- SEARCH -->
+
+        <div class="topbar-search">
+
+            <i
+                data-lucide="search"
+                class="search-icon"
+            ></i>
+
+            <input
+                type="search"
+                placeholder="Search Sway"
+                aria-label="Search Sway"
+            >
+
+        </div>
+
+
+        <!-- ACTIONS -->
+
+        <div class="topbar-actions">
+
+            <button
+                class="icon-button"
+                type="button"
+                aria-label="Notifications"
+            >
+
+                <i data-lucide="bell"></i>
+
+            </button>
+
+
+            <button
+                class="user-avatar"
+                type="button"
+                aria-label="Profile"
+            >
+                A
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ============================================
+         MAIN
+         ============================================ -->
+
+    <main class="profile-page">
+
+
+        <!-- ========================================
+             BACK BUTTON
+             ======================================== -->
+
+        <a
+            href="./index.html"
+            class="profile-back"
+        >
+
+            <i data-lucide="arrow-left"></i>
+
+            <span>
+                Back to Home
+            </span>
+
+        </a>
+
+
+
+        <!-- ========================================
+             PROFILE CARD
+             ======================================== -->
+
+        <section class="card profile-card">
+
+
+            <!-- PROFILE HEADER -->
+
+            <div class="profile-header">
+
+
+                <!-- AVATAR -->
+
+                <div
+                    class="profile-avatar"
+                    id="profile-avatar"
+                >
+                    SU
+                </div>
+
+
+                <!-- USER INFORMATION -->
+
+               <div class="profile-info">
+
+    <h1
+        id="profile-name"
+        class="profile-name"
+    >
+        Loading...
+    </h1>
+
+
+    <p
+        id="profile-username"
+        class="profile-username"
+    >
+        @username
+    </p>
+
+
+    <p
+        id="profile-bio"
+        class="profile-bio"
+    >
+    </p>
+
+
+    <!-- FOLLOW BUTTON -->
+
+    <button
+        type="button"
+        id="follow-button"
+        class="profile-follow-button"
+        style="display: none;"
+    >
+        Follow
+    </button>
+
+    <a
+    href="./edit-profile.html"
+    class="profile-edit-button"
+    id="edit-profile-button"
+>
+    Edit Profile
+</a>
+    
+</div>
+
+            </div>
+
+
+
+            <!-- ====================================
+                 FOLLOWER / FOLLOWING
+                 ==================================== -->
+
+            <div class="profile-stats">
+
+
+                <div class="profile-stat">
+
+                    <strong
+                        id="followers-count"
+                    >
+                        0
+                    </strong>
+
+                    <span>
+                        Followers
+                    </span>
+
+                </div>
+
+
+                <div class="profile-stat">
+
+                    <strong
+                        id="following-count"
+                    >
+                        0
+                    </strong>
+
+                    <span>
+                        Following
+                    </span>
+
+                </div>
+
+
+                <div class="profile-stat">
+
+                    <strong
+                        id="posts-count"
+                    >
+                        0
+                    </strong>
+
+                    <span>
+                        Posts
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================================
+             POSTS
+             ======================================== -->
+
+        <section class="profile-posts-section">
+
+            <div class="profile-posts-header">
+
+                <h2>
+                    Posts
+                </h2>
+
+            </div>
+
+
+            <div
+                id="profile-posts"
+                class="profile-posts"
+            >
+
+                <div class="profile-loading">
+
+                    Loading posts...
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ============================================
+         MOBILE NAVIGATION
+         ============================================ -->
+
+    <nav class="mobile-nav">
+
+        <a
+            href="./index.html"
+            class="mobile-nav-item"
+        >
+
+            <i
+                data-lucide="home"
+                class="mobile-nav-icon"
+            ></i>
+
+            <span>
+                Home
+            </span>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="mobile-nav-item"
+        >
+
+            <i
+                data-lucide="compass"
+                class="mobile-nav-icon"
+            ></i>
+
+            <span>
+                Explore
+            </span>
+
+        </a>
+
+
+        <a
+            href="./index.html"
+            class="mobile-nav-item"
+        >
+
+            <i
+                data-lucide="plus-circle"
+                class="mobile-nav-icon"
+            ></i>
+
+            <span>
+                Create
+            </span>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="mobile-nav-item"
+        >
+
+            <i
+                data-lucide="bell"
+                class="mobile-nav-icon"
+            ></i>
+
+            <span>
+                Alerts
+            </span>
+
+        </a>
+
+
+        <a
+            href="./profile.html"
+            class="mobile-nav-item active"
+        >
+
+            <i
+                data-lucide="user"
+                class="mobile-nav-icon"
+            ></i>
+
+            <span>
+                Profile
+            </span>
+
+        </a>
+
+    </nav>
+
+
+</div>
+
+
+
+<!-- ============================================
+     JAVASCRIPT
+     ============================================ -->
+
+<script src="./js/profile.js"></script>
+
+
+<script>
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        () => {
+
+            if (
+                typeof lucide !== "undefined"
+            ) {
+
+                lucide.createIcons();
+
+            }
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Sway - Connect, share, and discover."
+    >
+
+    <title>Sway — Connect. Share. Sway.</title>
+
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
+        href="./css/style.css"
+    >
+
+    <!-- Lucide Icons -->
+    <script
+        src="https://unpkg.com/lucide@latest"
+    ></script>
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- ============================================
+         TOP NAVIGATION
+         ============================================ -->
+
+    <header class="topbar">
+
+
+        <!-- BRAND -->
+
+        <a
+            href="#"
+            class="brand"
+        >
+
+            <span class="brand-mark">
+                S
+            </span>
+
+            <span>
+                Sway
+            </span>
+
+        </a>
+
+
+        <!-- SEARCH -->
+
+        <div class="topbar-search">
+
+            <i
+                data-lucide="search"
+                class="search-icon"
+            ></i>
+
+            <input
+                type="search"
+                placeholder="Search Sway"
+                aria-label="Search Sway"
+            >
+
+        </div>
+
+
+        <!-- ACTIONS -->
+
+        <div class="topbar-actions">
+
+
+            <!-- NOTIFICATIONS -->
+
+            <button
+                class="icon-button"
+                type="button"
+                aria-label="Notifications"
+            >
+
+                <i data-lucide="bell"></i>
+
+            </button>
+
+
+            <!-- ========================================
+                 LOGOUT BUTTON
+                 ======================================== -->
+
+            <button
+                id="logout-button"
+                type="button"
+                class="logout-button"
+            >
+                Logout
+            </button>
+
+
+            <!-- USER AVATAR -->
+
+            <button
+                class="user-avatar"
+                type="button"
+                aria-label="Open profile"
+            >
+                A
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ============================================
+         MAIN APPLICATION
+         ============================================ -->
+
+    <main class="main-layout">
+
+
+        <!-- ========================================
+             LEFT SIDEBAR
+             ======================================== -->
+
+        <aside class="sidebar">
+
+            <nav class="sidebar-nav">
+
+
+                <a
+                    href="#"
+                    class="nav-item active"
+                >
+
+                    <i data-lucide="home"></i>
+
+                    <span>
+                        Home
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="nav-item"
+                >
+
+                    <i data-lucide="compass"></i>
+
+                    <span>
+                        Explore
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="nav-item"
+                >
+
+                    <i data-lucide="bell"></i>
+
+                    <span>
+                        Notifications
+                    </span>
+
+                </a>
+
+
+                <a 
+    href="./profile.html" 
+    class="nav-item" 
+>
+    <i data-lucide="user"></i>
+
+    <span>
+        Profile
+    </span>
+</a>
+
+                <a
+                    href="#"
+                    class="nav-item"
+                >
+
+                    <i data-lucide="settings"></i>
+
+                    <span>
+                        Settings
+                    </span>
+
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+
+        <!-- ========================================
+             MAIN FEED
+             ======================================== -->
+
+        <section class="feed">
+
+
+            <!-- FEED HEADER -->
+
+            <div class="feed-header">
+
+                <div class="feed-heading">
+
+                    <div>
+
+                        <h1 class="feed-title">
+                            Home
+                        </h1>
+
+                        <p class="feed-subtitle">
+                            See what's happening on Sway.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FEED TABS -->
+
+                <div
+                    class="feed-tabs"
+                    role="tablist"
+                    aria-label="Feed type"
+                >
+
+                    <button
+                        class="feed-tab active"
+                        type="button"
+                        role="tab"
+                        aria-selected="true"
+                    >
+                        For You
+                    </button>
+
+
+                    <button
+                        class="feed-tab"
+                        type="button"
+                        role="tab"
+                        aria-selected="false"
+                    >
+                        Following
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ====================================
+                 CREATE POST COMPOSER
+                 ==================================== -->
+
+            <article class="card composer">
+
+                <div class="composer-main">
+
+                    <div class="avatar">
+                        A
+                    </div>
+
+
+                    <button
+                        class="composer-input"
+                        id="open-post-modal"
+                        type="button"
+                    >
+                        What's on your mind?
+                    </button>
+
+                </div>
+
+
+                <div class="composer-footer">
+
+                    <div class="composer-actions">
+
+
+                        <!-- PHOTO -->
+
+                        <button
+                            class="composer-action"
+                            id="composer-photo-button"
+                            type="button"
+                        >
+
+                            <i
+                                data-lucide="image"
+                            ></i>
+
+                            <span>
+                                Photo
+                            </span>
+
+                        </button>
+
+
+                        <!-- FEELING -->
+
+                        <button
+                            class="composer-action"
+                            id="composer-feeling-button"
+                            type="button"
+                        >
+
+                            <i
+                                data-lucide="smile"
+                            ></i>
+
+                            <span>
+                                Feeling
+                            </span>
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- POST -->
+
+                    <button
+                        class="btn btn-primary post-button"
+                        id="composer-post-button"
+                        type="button"
+                    >
+                        Post
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!--
+                IMPORTANT:
+                feed.js will insert posts here.
+            -->
+
+        </section>
+
+
+
+        <!-- ========================================
+             RIGHT SIDEBAR
+             ======================================== -->
+
+        <aside class="right-sidebar">
+
+            <div class="card suggestions-card">
+
+
+                <!-- HEADER -->
+
+                <div class="suggestions-header">
+
+                    <h2 class="suggestions-title">
+                        Suggested for you
+                    </h2>
+
+                    <p class="suggestions-subtitle">
+                        People you may want to connect with.
+                    </p>
+
+                </div>
+
+
+                <!-- USERS -->
+
+                <div class="suggestion-list">
+
+
+                    <!-- USER 1 -->
+
+                    <div class="suggestion">
+
+                        <div class="suggestion-avatar">
+                            P
+                        </div>
+
+
+                        <div class="suggestion-info">
+
+                            <span class="suggestion-name">
+                                Priya Sharma
+                            </span>
+
+                            <span class="suggestion-username">
+                                @priya
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            class="btn btn-secondary follow-button"
+                            type="button"
+                        >
+                            Follow
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- USER 2 -->
+
+                    <div class="suggestion">
+
+                        <div class="suggestion-avatar">
+                            R
+                        </div>
+
+
+                        <div class="suggestion-info">
+
+                            <span class="suggestion-name">
+                                Rahul Kumar
+                            </span>
+
+                            <span class="suggestion-username">
+                                @rahul
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            class="btn btn-secondary follow-button"
+                            type="button"
+                        >
+                            Follow
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- USER 3 -->
+
+                    <div class="suggestion">
+
+                        <div class="suggestion-avatar">
+                            M
+                        </div>
+
+
+                        <div class="suggestion-info">
+
+                            <span class="suggestion-name">
+                                Meera Nair
+                            </span>
+
+                            <span class="suggestion-username">
+                                @meera
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            class="btn btn-secondary follow-button"
+                            type="button"
+                        >
+                            Follow
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FOOTER -->
+
+                <a
+                    href="#"
+                    class="suggestions-footer"
+                >
+                    See all suggestions →
+                </a>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+
+    <!-- ============================================
+         MOBILE NAVIGATION
+         ============================================ -->
+
+    <nav class="mobile-nav">
+
+
+        <a
+            href="#"
+            class="mobile-nav-item active"
+            aria-label="Home"
+        >
+
+            <i
+                data-lucide="home"
+                class="mobile-nav-icon"
+            ></i>
+
+            <span>
+                Home
+            </span>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="mobile-nav-item"
+            aria-label="Explore"
+        >
+
+            <i
+                data-lucide="compass"
+                class="mobile-nav-icon"
+            ></i>
+
+            <span>
+                Explore
+            </span>
+
+        </a>
+
+
+        <!-- MOBILE CREATE -->
+
+        <button
+            type="button"
+            class="mobile-create-button"
+            id="mobile-create-post"
+            aria-label="Create post"
+        >
+            +
+        </button>
+
+
+        <a
+            href="#"
+            class="mobile-nav-item"
+            aria-label="Notifications"
+        >
+
+            <i
+                data-lucide="bell"
+                class="mobile-nav-icon"
+            ></i>
+
+            <span>
+                Alerts
+            </span>
+
+        </a>
+
+
+        <a
+            href="./profile.html"
+            class="mobile-nav-item"
+            aria-label="Profile"
+        >
+
+            <i
+                data-lucide="user"
+                class="mobile-nav-icon"
+            ></i>
+
+            <span>
+                Profile
+            </span>
+
+        </a>
+
+    </nav>
+
+</div>
+
+
+
+<!-- ============================================
+     CREATE POST MODAL
+     ============================================ -->
+
+<div
+    class="modal-overlay"
+    id="create-post-modal"
+    aria-hidden="true"
+>
+
+    <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="create-post-title"
+    >
+
+
+        <!-- MODAL HEADER -->
+
+        <div class="modal-header">
+
+            <h2 id="create-post-title">
+                Create a post
+            </h2>
+
+
+            <button
+                class="modal-close"
+                id="close-post-modal"
+                type="button"
+                aria-label="Close"
+            >
+
+                <i data-lucide="x"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- MODAL BODY -->
+
+        <div class="modal-body">
+
+
+            <!-- AUTHOR -->
+
+            <div class="modal-author">
+
+                <div class="avatar">
+                    A
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        You
+                    </strong>
+
+                    <p class="text-muted">
+                        Share with everyone
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TEXT INPUT -->
+
+            <textarea
+                id="post-content"
+                class="post-textarea"
+                placeholder="What's on your mind?"
+                rows="5"
+            ></textarea>
+
+
+
+            <!-- ==================================
+                 IMAGE PREVIEW
+                 ================================== -->
+
+            <div
+                id="post-image-preview"
+                class="post-image-preview"
+                style="display: none;"
+            >
+
+                <div class="post-image-preview-wrapper">
+
+                    <img
+                        id="post-preview-image"
+                        src=""
+                        alt="Selected image preview"
+                    >
+
+
+                    <button
+                        type="button"
+                        id="remove-post-image"
+                        class="remove-post-image"
+                        aria-label="Remove selected image"
+                    >
+
+                        <i data-lucide="x"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==================================
+                 HIDDEN IMAGE INPUT
+                 ================================== -->
+
+            <input
+                type="file"
+                id="post-image"
+                accept="image/jpeg,image/png,image/webp,image/gif"
+                hidden
+            >
+
+        </div>
+
+
+
+        <!-- ====================================
+             MODAL FOOTER
+             ==================================== -->
+
+        <div class="modal-actions">
+
+
+            <!-- PHOTO -->
+
+            <button
+                class="composer-action"
+                id="photo-upload-button"
+                type="button"
+            >
+
+                <i data-lucide="image"></i>
+
+                <span>
+                    Photo
+                </span>
+
+            </button>
+
+
+            <!-- FEELING -->
+
+            <button
+                class="composer-action"
+                id="modal-feeling-button"
+                type="button"
+            >
+
+                <i data-lucide="smile"></i>
+
+                <span>
+                    Feeling
+                </span>
+
+            </button>
+
+
+            <!-- POST -->
+
+            <button
+                id="create-post-button"
+                class="btn btn-primary post-button"
+                type="button"
+                disabled
+            >
+                Post
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ============================================
+     JAVASCRIPT
+     ============================================ -->
+
+<script src="./js/main.js"></script>
+
+<script src="./js/session.js"></script>
+
+<script src="./js/feed.js"></script>
+
+
+<script>
+
+    /* ============================================
+       INITIALIZE LUCIDE ICONS
+       ============================================ */
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        () => {
+
+            if (
+                typeof lucide !== "undefined"
+            ) {
+
+                lucide.createIcons();
+
+            }
+
+        }
+    );
+
+
+    /* ============================================
+       LOGOUT
+       ============================================ */
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        () => {
+
+            const logoutButton =
+                document.getElementById(
+                    "logout-button"
+                );
+
+
+            if (!logoutButton) {
+
+                console.error(
+                    "❌ Logout button not found."
+                );
+
+                return;
+
+            }
+
+
+            logoutButton.addEventListener(
+                "click",
+                () => {
+
+                    console.log(
+                        "🚪 Logout button clicked"
+                    );
+
+
+                    /*
+                     * Remove authentication data
+                     */
+
+                    localStorage.removeItem(
+                        "sway_token"
+                    );
+
+                    localStorage.removeItem(
+                        "sway_user"
+                    );
+
+
+                    /*
+                     * Optional cleanup:
+                     * remove any temporary Sway
+                     * session information.
+                     */
+
+                    sessionStorage.clear();
+
+
+                    console.log(
+                        "✅ Sway session cleared."
+                    );
+
+
+                    /*
+                     * Redirect to login page
+                     */
+
+                    window.location.href =
+                        "./auth/login.html";
+
+                }
+            );
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>
